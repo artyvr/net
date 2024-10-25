@@ -14,14 +14,14 @@ conf t
 service password-encryption
 aaa new-model
 aaa authentication login default local
-username имя privilege 15 secret пароль
+username USER privilege 15 secret PWD
 
 conf t
 hostname R1
 
 conf t
 interface Fa 4
-ip address 202.155.101.2 255.255.255.252 // Данные провайдера
+ip address 202.155.101.2 255.255.255.252
  либо ip address dhcp
 no shutdown
 
@@ -32,17 +32,17 @@ no shutdown
 
 ip route 0.0.0.0 0.0.0.0 202.155.101.1
 
-ip dhcp pool LAN (LAN - имя пула)
-network 192.168.0.0 255.255.255.0 (сеть из которой будем раздавать)
-dns-server 192.168.0.1 8.8.8.8  (DNS сервера для клиентов)
-default-router 192.168.0.1 (шлюз)
+ip dhcp pool LAN
+network 192.168.0.0 255.255.255.0
+dns-server 192.168.0.1 8.8.8.8
+default-router 192.168.0.1
 exit
-ip dhcp excluded-address 192.168.0.1 192.168.0.100 (исключим первые сто адресов из DHCP)
+ip dhcp excluded-address 192.168.0.1 192.168.0.100
 
 ip domain-lookup
 ip dns server
-ip name-server 192.168.2.1  (провайдерский DNS)
-ip name-server 8.8.8.8 (dns Google)
+ip name-server 192.168.2.1
+ip name-server 8.8.8.8
 
 ip access-list standard ACL_NAT
 permit 192.168.0.0 0.0.0.255
