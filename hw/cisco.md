@@ -21,7 +21,7 @@ hostname R1
 
 conf t
 interface Fa 4
-ip address 202.155.101.2 255.255.255.252
+ip address xxx.xxx.xxx.xx2 255.xxx.xxx.xxx
  либо ip address dhcp
 no shutdown
 
@@ -30,7 +30,7 @@ interface Vlan 1
 Ip address 192.168.0.1 255.255.255.0
 no shutdown
 
-ip route 0.0.0.0 0.0.0.0 202.155.101.1
+ip route 0.0.0.0 0.0.0.0 xxx.xxx.xxx.xx1
 
 ip dhcp pool LAN
 network 192.168.0.0 255.255.255.0
