@@ -15,7 +15,7 @@ user-interface aux 0
 authentication-mode scheme 
 
 interface Vlan-interface 1
-ip address 192.168.0.5 24
+ip address 192.168.0.2 24
 
 user-interface vty 0 4
 authentication-mode scheme
