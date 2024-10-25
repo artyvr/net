@@ -1,6 +1,6 @@
 # H3C switch main config
 
-bash```
+```bash
 
 system-view
 sysname s1
@@ -27,10 +27,6 @@ clock datetime 16:50:00 10/21/2024
 
 header login !
 
-   ___| _ |
- \___ \   |
-       |  |
- _____/  _|
+save
 
- save
  ```

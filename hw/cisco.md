@@ -3,7 +3,7 @@
 sudo usermod -a -G uucp USERNAME
 gtkterm
 
-bash```
+```bash
 
 enable
 write erase
@@ -53,10 +53,5 @@ ip nat outside
 ip nat inside source list ACL_NAT interface fa4
 
 write
-
-   _ \ _ |
-  |   |  |
-  __ <   |
- _| \_\ _|
 
 ```
